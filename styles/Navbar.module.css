@@ -1,0 +1,70 @@
+/* Navbar.module.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(229, 222, 223);
+  box-shadow: none;
+  border: none;
+  outline: none;
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold;
+}
+
+.logo {
+border-radius: 80px;
+  margin-right: 15px;
+}
+
+.navbar h2 {
+  margin-right: 755px;
+}
+
+.navbarNav {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  margin: 0 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.navItem.active .navLink {
+  color: #5161ce;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.navItem:nth-child(2) {
+  margin-top: 20px; /* Ajusta este valor según cuánto quieras que descienda el ítem */
+}
+
+.navLink {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: rgb(19, 16, 16);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.horiSelector {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.left,
+.right {
+  display: none;
+}

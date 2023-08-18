@@ -1,0 +1,91 @@
+.container {
+  position: relative;
+  background-image: url('/Images/artwork\ \(14\).png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  padding-top: 50px; /* Añade espacio en la parte superior del contenedor */
+}
+
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  padding-right: 254px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: color 0.3s;
+}
+
+.mainTitle:hover {
+  color: #5161ce;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mainTitle::before {
+  content: "»";
+  margin-right: 10px;
+  font-size: 30px;
+  color: #ff4500;
+}
+
+.mainText {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; /* Menor tamaño de fuente que el título */
+  font-weight: 400; /* Menor grosor de fuente que el título */
+  color: #555; /* Un color ligeramente más claro que el título */
+  padding-right: 85px; /* Un poco más de padding para alinearlo con el título */
+  margin-bottom: 15px; /* Menor margen que el título */
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.mainText:hover {
+  color: #5161ce;
+  background-color: rgba(255, 255, 255, 0.05); /* Un fondo más ligero que el título al pasar el mouse */
+}
+
+.imageContainer {
+  margin: 30px;
+  position: relative; /* Esto es necesario para que el pseudo-elemento se posicione correctamente */
+  width: 300px; /* o el ancho que desees */
+  height: 220px; /* o la altura que desees */
+  margin-left: 800px;
+  background-image: url('/Images/Diseño\ sin\ título\ \(4\).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Otros estilos que desees agregar */
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.137); /* Aquí, el 0.5 es el nivel de opacidad. Puedes ajustarlo según tus necesidades. */
+}
+
+.parrafo {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #555;
+  margin-top: -250px;
+  line-height: 1.5;
+  max-width: 350px;
+  margin-left: 1120px
+  
+}

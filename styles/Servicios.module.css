@@ -1,0 +1,52 @@
+.servicios {
+  padding: 50px 0;
+  background-color: #0c0c0c;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/Images/facutorres._Fondo_minimalista_que_evoca_un_ambiente_futurista_c_91cdaff2-b72c-4186-8ace-d1a2e8c9762f.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex; /* Agregado para usar Flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan al siguiente renglón */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+}
+
+.servicio {
+  margin: 30px;
+  background-color: rgba(255, 255, 255, 0.678);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 0 0 calc(50% - 60px); /* Ocupa el 50% del ancho del contenedor menos los márgenes */
+  transition: transform 0.3s ease;
+}
+
+.servicios h2 {
+  font-size: 3.5em; /* Aumentado de 3em a 4em */
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-left: 800px;
+  border-bottom: 2px solid black;
+  border-bottom: 4px solid black;
+  width: 100%; /* Ocupa todo el ancho para que se muestre en su propia línea */
+  
+}
+
+.servicios h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.servicios p {
+  font-size: 1em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: #555;
+}
+
+.servicio:hover {
+  transform: scale(1.05); /* Efecto de "zoom" al pasar el mouse */
+}

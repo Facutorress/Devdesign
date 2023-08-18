@@ -1,0 +1,66 @@
+/* components/Cotizacion.module.css */
+
+.cotizacion {
+  padding: 150px 0;
+  background-color: #f9f9f9;
+  background-image: url('/Images/facutorres._White_wall_serving_as_the_backdrop_for_a_minimalist_b1ca74ee-0346-4227-919a-fc294aa23983.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #050505; /* Cambio de color de texto a blanco para mejor contraste */
+  font-family: 'Montserrat', sans-serif; /* Usar Montserrat para el contenido */
+}
+.cotizacion h2 {
+  display: inline-block; /* Agregado para que el h2 sea un bloque en línea */
+}
+.formulario {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.formulario select, .formulario button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  color: #0e0d0d;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+.formulario select[multiple] {
+  height: 60px; /* o la altura que prefieras */
+  overflow-y: auto; /* permite el desplazamiento vertical */
+}
+
+.formulario select:hover, .formulario select:focus, .formulario button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.formulario button {
+  background-color: #ff4500;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #ff6347;
+  transform: scale(1.05); /* Efecto de "zoom" al pasar el mouse */
+}
+
+.estimacion {
+  margin-top: 40px;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6); /* Blanco semitransparente */
+  padding: 10px 20px; /* Espacio alrededor del texto */
+  border-radius: 10px; /* Esquinas redondeadas */
+  display: inline-block; /* Para que el fondo solo rodee el texto y no toda la línea */
+}

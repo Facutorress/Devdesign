@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap'); /* Importando la fuente Montserrat */
+
+.proceso {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Usando la fuente Montserrat */
+  background-image: url('/Images/facutorres._Minimalist_futuristic_office_setting_showcasing_a_s_868e603c-3e2e-4de0-91f1-d1701fcae622.png'); /* Cambia '/ruta/de/tu/imagen.jpg' por la ruta de tu imagen */
+  background-size: cover; /* Esto hará que la imagen cubra toda la sección */
+  background-position: center; /* Esto centrará la imagen */
+  background-repeat: no-repeat; /* Esto evitará que la imagen se repita */
+  font-weight: bold;
+}
+.proceso h2{
+  margin-right: 800px;
+  border-bottom: 4px solid black;
+  font-size: 3em;
+  color: black;
+}
+
+.pasos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.paso:hover {
+  transform: scale(1.05); /* Efecto de "zoom" al pasar el mouse */
+}
+
+.paso {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: rgba(235, 231, 231, 0.8); /* Fondo semitransparente para mejorar la legibilidad del texto sobre la imagen */
+  transition: transform 0.3s ease;
+}
+
+.paso h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: 500; /* Peso medio para los títulos */
+  font-weight: bold;
+}
+
+.paso p {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 400; /* Peso normal para el texto */
+  font-weight: bold;
+}
