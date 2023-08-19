@@ -20,14 +20,13 @@
   border-bottom: 4px solid black;
   display: inline-block; /* Para que el borde solo rodee el texto */
   margin-right: 600px;
-  margin-top: 130px;
+  margin-top: 40px;
 }
 
 .misionVision {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 100px;
 }
 
 .mision, .vision {
