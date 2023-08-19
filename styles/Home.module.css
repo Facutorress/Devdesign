@@ -63,8 +63,8 @@
   margin-top: -20px;
   margin: 30px;
   position: relative; /* Esto es necesario para que el pseudo-elemento se posicione correctamente */
-  width: 300px; /* o el ancho que desees */
-  height: 225px; /* o la altura que desees */
+  width: 280px; /* o el ancho que desees */
+  height: 200px; /* o la altura que desees */
   margin-left: 800px;
   background-image: url('/Images/Diseño\ sin\ título\ \(4\).png');
   background-size: cover;
@@ -75,8 +75,8 @@
 .imageContainerr {
   margin: 30px;
   position: relative; /* Esto es necesario para que el pseudo-elemento se posicione correctamente */
-  width: 300px; /* o el ancho que desees */
-  height: 230px; /* o la altura que desees */
+  width: 280px; /* o el ancho que desees */
+  height: 200px; /* o la altura que desees */
   margin-left: 800px;
   margin-top: 60px;
   background-image: url('/Images/facutorres._White_wall_serving_as_the_backdrop_for_a_minimalist_b1ca74ee-0346-4227-919a-fc294aa23983.png');

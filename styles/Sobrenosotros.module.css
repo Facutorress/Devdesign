@@ -19,7 +19,7 @@
   padding: 10px 20px;
   border-bottom: 2px solid black;
   display: inline-block; /* Para que el borde solo rodee el texto */
-  margin-right: 600px;
+  margin-right: 200px;
   margin-top: 40px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .mision, .vision {
-  border: 2px solid #050505;
+  border: 4px solid #050505;
   background-color: rgba(231, 225, 225, 0.8);
   padding: 20px;
   border-radius: 10px;
