@@ -65,7 +65,7 @@
   position: relative; /* Esto es necesario para que el pseudo-elemento se posicione correctamente */
   width: 280px; /* o el ancho que desees */
   height: 200px; /* o la altura que desees */
-  margin-left: 800px;
+  margin-left: 300px;
   background-image: url('/Images/Diseño\ sin\ título\ \(4\).png');
   background-size: cover;
   background-position: center;
