@@ -41,6 +41,11 @@
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
   transition: transform 0.3s ease; /* Transición para el efecto hover */
+  
+}
+.contenedorAnimado {
+  overflow: hidden;
+  /* Otros estilos que necesites para el contenedor */
 }
 
 .mision:hover, .vision:hover {
