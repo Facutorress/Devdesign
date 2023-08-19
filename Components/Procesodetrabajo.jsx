@@ -1,37 +1,87 @@
-// components/ProcesoDeTrabajo.js
-
+import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Procesodetrabajo.module.css';
 
 function ProcesoDeTrabajo() {
+  const complexAnimation = {
+    hidden: { opacity: 0, y: 50, rotate: -10 },
+    visible: { opacity: 1, y: 0, rotate: 0, transition: { duration: 0.8 } }
+  };
+
+  const refs = Array(5).fill().map(() => useRef(null));
+  const [inViews, setInViews] = useState(Array(5).fill(false));
+
+  useEffect(() => {
+    refs.forEach((ref, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setInViews(prevInViews => {
+              const newInViews = [...prevInViews];
+              newInViews[index] = true;
+              return newInViews;
+            });
+          }
+        },
+        {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        }
+      );
+
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+
+      return () => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      };
+    });
+  }, []);
+  const pasos = [
+    {
+      titulo: "1. Consulta Inicial",
+      descripcion: "Comenzamos con una reunión para entender tus necesidades y objetivos."
+    },
+    {
+      titulo: "2. Diseño",
+      descripcion: "Creación de mockups y prototipos basados en tus requerimientos."
+    },
+    {
+      titulo: "3. Desarrollo",
+      descripcion: "Construcción del sitio web con las tecnologías más adecuadas."
+    },
+    {
+      titulo: "4. Revisión",
+      descripcion: "Revisamos juntos el sitio y hacemos los ajustes necesarios."
+    },
+    {
+      titulo: "5. Lanzamiento",
+      descripcion: "Una vez que todo esté perfecto, lanzamos tu sitio al mundo."
+    }
+  ];
+  
   return (
     <section className={styles.proceso}>
       <h2>Proceso de Trabajo</h2>
 
       <div className={styles.pasos}>
-        <div className={styles.paso}>
-          <h3>1. Consulta Inicial</h3>
-          <p>Comenzamos con una reunión para entender tus necesidades y objetivos.</p>
-        </div>
+      {pasos.map((paso, index) => (
+  <motion.div 
+    ref={refs[index]}
+    className={styles.paso}
+    initial="hidden"
+    animate={inViews[index] ? "visible" : "hidden"}
+    variants={complexAnimation}
+  >
+    <h3>{paso.titulo}</h3>
+    <p>{paso.descripcion}</p>
+  </motion.div>
+))}
 
-        <div className={styles.paso}>
-          <h3>2. Diseño</h3>
-          <p>Creación de mockups y prototipos basados en tus requerimientos.</p>
-        </div>
-
-        <div className={styles.paso}>
-          <h3>3. Desarrollo</h3>
-          <p>Construcción del sitio web con las tecnologías más adecuadas.</p>
-        </div>
-
-        <div className={styles.paso}>
-          <h3>4. Revisión</h3>
-          <p>Revisamos juntos el sitio y hacemos los ajustes necesarios.</p>
-        </div>
-
-        <div className={styles.paso}>
-          <h3>5. Lanzamiento</h3>
-          <p>Una vez que todo esté perfecto, lanzamos tu sitio al mundo.</p>
-        </div>
       </div>
     </section>
   );

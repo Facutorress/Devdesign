@@ -3,8 +3,44 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Layout from '../Components/Layout';
 import styles from '../styles/Contacto.module.css';
+import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+
 
 function Contacto() {
+  const slideFromRight = {
+    hidden: { opacity: 0, x: 300 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+  };
+  const [inView, setInView] = useState(false);
+  const formRef = useRef();
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      }
+    );
+  
+    if (formRef.current) {
+      observer.observe(formRef.current);
+    }
+  
+    return () => {
+      if (formRef.current) {
+        observer.unobserve(formRef.current);
+      }
+    };
+  }, []);
+    
   const formik = useFormik({
     initialValues: {
       nombre: '',
@@ -23,18 +59,33 @@ function Contacto() {
       mensaje: Yup.string()
         .required('El mensaje es obligatorio')
     }),
-    onSubmit: values => {
-      // Aquí puedes manejar el envío de los datos, por ejemplo, a una API.
-      console.log(values);
-    }
   });
+  const enviarEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bsm3s2a', 'template_hqm8b6h', e.target, 'AmUXdfMze8_5aWuOh')
+      .then((result) => {
+          console.log(result.text);
+          formik.resetForm(); // Resetea el formulario
+          alert('Mensaje enviado con éxito!'); // Muestra un mensaje de alerta
+      }, (error) => {
+          console.log(error.text);
+          alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+      });
+};
+
 
   return (
     <Layout title="Contacto">
       <section className={styles.contacto}>
         <h2>Ponete en contacto con nosotros</h2>
-
-        <form onSubmit={formik.handleSubmit} className={styles.formulario}>
+        <motion.div 
+  ref={formRef}
+  initial="hidden"
+  animate={inView ? "visible" : "hidden"}
+  variants={slideFromRight}
+>
+        <form onSubmit={enviarEmail} className={styles.formulario}>
           <input 
             type="text" 
             placeholder="Nombre" 
@@ -76,7 +127,7 @@ function Contacto() {
 
           <button type="submit">Enviar</button>
         </form>
-
+</motion.div>
       <div className={styles.info}>
         <p>Buenos Aires, La Plata</p>
         <p><strong>Teléfono:</strong> +54 221303721</p>
