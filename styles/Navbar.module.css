@@ -34,6 +34,7 @@ border-radius: 80px;
   margin: 0 5px;
   position: relative;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .navItem.active .navLink {
@@ -51,6 +52,7 @@ border-radius: 80px;
   text-decoration: none;
   color: rgb(19, 16, 16);
   transition: background-color 0.3s, color 0.3s;
+  margin-right: 20px;
 }
 
 .navLink:hover {

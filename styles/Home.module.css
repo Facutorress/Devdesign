@@ -19,7 +19,7 @@
   font-size: 24px;
   font-weight: 600;
   color: #333;
-  padding-right: 224px;
+  padding-right: 214px;
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   transition: color 0.3s;
@@ -47,7 +47,7 @@
   font-size: 18px; /* Menor tamaño de fuente que el título */
   font-weight: 400; /* Menor grosor de fuente que el título */
   color: #555; /* Un color ligeramente más claro que el título */
-  padding-right: 35px; /* Un poco más de padding para alinearlo con el título */
+  padding-right: 32px; /* Un poco más de padding para alinearlo con el título */
   margin-bottom: 15px; /* Menor margen que el título */
   transition: color 0.3s;
   font-weight: bold;
