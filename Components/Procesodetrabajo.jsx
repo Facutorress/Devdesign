@@ -7,41 +7,40 @@ function ProcesoDeTrabajo() {
     hidden: { opacity: 0, y: 50, rotate: -10 },
     visible: { opacity: 1, y: 0, rotate: 0, transition: { duration: 0.8 } }
   };
+  const refs = useRef(Array(6).fill().map(() => React.createRef()));
+ const [inViews, setInViews] = useState(Array(5).fill(false));
 
-  const refs = Array(5).fill().map(() => useRef(null));
-  const [inViews, setInViews] = useState(Array(5).fill(false));
-
-  useEffect(() => {
-    refs.forEach((ref, index) => {
-      const currentRef = ref.current;
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setInViews(prevInViews => {
-              const newInViews = [...prevInViews];
-              newInViews[index] = true;
-              return newInViews;
-            });
-          }
-        },
-        {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.1
+ useEffect(() => {
+  refs.current.forEach((ref, index) => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInViews(prevInViews => {
+            const newInViews = [...prevInViews];
+            newInViews[index] = true;
+            return newInViews;
+          });
         }
-      );
-
-      if (currentRef) {
-        observer.observe(currentRef);
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
       }
+    );
 
-      return () => {
-        if (currentRef) {
-          observer.unobserve(currentRef);
-        }
-      };
-    });
-  }, []);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  });
+}, [refs]);
+
 
   const pasos = [
     {

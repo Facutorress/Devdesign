@@ -8,7 +8,7 @@ function Servicios() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
-  const refs = Array(6).fill().map(() => useRef(null));
+  const refs = Array(6).fill().map(() => React.createRef());
   const [inViews, setInViews] = useState(Array(6).fill(false));
 
   useEffect(() => {
@@ -50,6 +50,7 @@ function Servicios() {
 
       {['🎨 Diseño web', '💻 Desarrollo web', '🔧 Mantenimiento y soporte', '📈 Otros servicios', '🔍 Consultoría tecnológica', '⚙️ Integraciones y automatizaciones'].map((title, index) => (
         <motion.div 
+        key={index}
           ref={refs[index]}
           className={styles.servicio}
           initial="hidden"
