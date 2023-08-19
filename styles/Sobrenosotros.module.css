@@ -17,7 +17,7 @@
   text-shadow: none;
   margin: 15px;
   padding: 10px 20px;
-  border-bottom: 4px solid black;
+  border-bottom: 2px solid black;
   display: inline-block; /* Para que el borde solo rodee el texto */
   margin-right: 600px;
   margin-top: 40px;
