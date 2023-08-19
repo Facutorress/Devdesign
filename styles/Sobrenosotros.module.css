@@ -1,3 +1,28 @@
+.sobreNosotros {
+  padding: 60px 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/Images/facutorres._Art_studio_of_the_future_bathed_in_a_light_gray_hue_24951638-af9a-4c7f-b8ee-28fd4e6ee184.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  height: 800px;
+}
+
+.sobreNosotros h2 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #050505;
+  text-shadow: none;
+  margin: 15px;
+  padding: 10px 20px;
+  border-bottom: 4px solid black;
+  display: inline-block; /* Para que el borde solo rodee el texto */
+  margin-right: 600px;
+  margin-top: 130px;
+}
+
 .misionVision {
   display: flex;
   justify-content: space-between;
@@ -21,4 +46,26 @@
 .contenedorAnimado {
   overflow: hidden;
   flex: 1;  /* Añadido para que ocupe el espacio disponible */
+}
+
+
+.mision:hover, .vision:hover {
+  transform: scale(1.05); /* Efecto de "zoom" al pasar el mouse */
+}
+
+.sobreNosotros h3 {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #050505;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px rgba(48, 47, 47, 0.411);
+  text-align: center;
+}
+
+.sobreNosotros p {
+  font-size: 1.3em;
+  color: #0a0a0a;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(48, 47, 47, 0.356);
+  color: #555;
 }
