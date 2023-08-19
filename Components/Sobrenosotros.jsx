@@ -12,13 +12,10 @@ function SobreNosotros() {
     hidden: { x: '100vw' },
     visible: { x: 0, transition: { type: 'spring', stiffness: 60 } }
   };
-  
   const [inView, setInView] = useState(false);
   const elementRef = useRef();
   
-  
   useEffect(() => {
-    const currentElement = elementRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -32,17 +29,17 @@ function SobreNosotros() {
       }
     );
   
-    if (currentElement) {
-      observer.observe(currentElement);
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
     }
   
     return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
       }
     };
   }, []);
-
+    
   return (
     <section className={styles.sobreNosotros} ref={elementRef}>
       <h2>¿Por qué confiar en nosotros?</h2>

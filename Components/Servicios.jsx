@@ -8,7 +8,7 @@ function Servicios() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
-  const refs = Array(6).fill().map(() => React.createRef());
+  const refs = Array(6).fill().map(() => useRef(null));
   const [inViews, setInViews] = useState(Array(6).fill(false));
 
   useEffect(() => {
