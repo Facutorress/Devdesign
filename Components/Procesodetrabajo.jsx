@@ -13,6 +13,7 @@ function ProcesoDeTrabajo() {
 
   useEffect(() => {
     refs.forEach((ref, index) => {
+      const currentRef = ref.current;
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -30,17 +31,18 @@ function ProcesoDeTrabajo() {
         }
       );
 
-      if (ref.current) {
-        observer.observe(ref.current);
+      if (currentRef) {
+        observer.observe(currentRef);
       }
 
       return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
+        if (currentRef) {
+          observer.unobserve(currentRef);
         }
       };
     });
   }, []);
+
   const pasos = [
     {
       titulo: "1. Consulta Inicial",
@@ -72,6 +74,7 @@ function ProcesoDeTrabajo() {
       {pasos.map((paso, index) => (
   <motion.div 
     ref={refs[index]}
+    key={index}
     className={styles.paso}
     initial="hidden"
     animate={inViews[index] ? "visible" : "hidden"}

@@ -16,7 +16,9 @@ function SobreNosotros() {
   const [inView, setInView] = useState(false);
   const elementRef = useRef();
   
+  
   useEffect(() => {
+    const currentElement = elementRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -30,17 +32,17 @@ function SobreNosotros() {
       }
     );
   
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (currentElement) {
+      observer.observe(currentElement);
     }
   
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
-    
+
   return (
     <section className={styles.sobreNosotros} ref={elementRef}>
       <h2>¿Por qué confiar en nosotros?</h2>

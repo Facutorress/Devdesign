@@ -23,6 +23,7 @@ const elementRef = useRef();
     hover: { scale: 1.1, transition: { yoyo: Infinity } }
   };
   useEffect(() => {
+    const currentRef = elementRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -36,13 +37,13 @@ const elementRef = useRef();
       }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
 }, []);
