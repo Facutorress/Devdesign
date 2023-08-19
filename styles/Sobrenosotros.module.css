@@ -20,6 +20,7 @@
   display: inline-block; /* Para que el borde solo rodee el texto */
   margin-right: 600px;
   margin-top: 40px;
+  border: none;
 }
 
 .misionVision {
