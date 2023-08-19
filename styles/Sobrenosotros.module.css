@@ -45,6 +45,7 @@
 }
 .contenedorAnimado {
   overflow: hidden;
+  max-width: 100vw;
   /* Otros estilos que necesites para el contenedor */
 }
 
