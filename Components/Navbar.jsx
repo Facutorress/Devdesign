@@ -24,7 +24,7 @@ function Navbar() {
           <Link href="/"><p className={styles.navLink}>Home</p></Link>
         </li>
         <li className={router.pathname === "/cotizacion" ? `${styles.navItem} ${styles.active}` : styles.navItem}>
-          <Link href="/cotizacion"><p className={styles.navLink}>Cotizá tu página</p></Link>
+          <Link href="/cotizacion"><p className={styles.navLink}>Cotizar</p></Link>
         </li>
         <li className={router.pathname === "/contacto" ? `${styles.navItem} ${styles.active}` : styles.navItem}>
           <Link href="/contacto"><p className={styles.navLink}>Contacto</p></Link>

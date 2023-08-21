@@ -13,6 +13,7 @@
   font-family: 'Montserrat', sans-serif; 
   font-weight: bold;
   padding: -15px;
+
 }
 
 .logo {
@@ -22,54 +23,40 @@ border-radius: 80px;
 }
 
 .navbar h2 {
-  margin-right: 755px;
+  margin-right: 675px;
+  font-family: 'Montserrat', sans-serif; 
 }
 
 .navbarNav {
   display: flex;
-  align-items: center;
+  font-family: 'Montserrat', sans-serif; 
 }
 
 .navItem {
-  margin: 0 5px;
+  margin: 6px 10px;
   position: relative;
   cursor: pointer;
-  margin-left: 20px;
+  font-weight: bold;
 }
+.navItem:not(:last-child) {
+  margin-right: 15px;
+}
+
 
 .navItem.active .navLink {
   color: #5161ce;
   background-color: white;
   border-radius: 5px;
   margin-right: 20px;
+
 }
-.navItem:nth-child(2) {
-  margin-top: 20px; /* Ajusta este valor según cuánto quieras que descienda el ítem */
-}
+
 
 .navLink {
-  padding: 10px 15px;
+  padding: 8px 1px;
   text-decoration: none;
   color: rgb(19, 16, 16);
-  transition: background-color 0.3s, color 0.3s;
-  margin-right: 20px;
+ 
 }
 
-.navLink:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 
-.horiSelector {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  border-radius: 3px;
-  transition: all 0.3s;
-}
-
-.left,
-.right {
-  display: none;
-}

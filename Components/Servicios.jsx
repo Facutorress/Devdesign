@@ -43,26 +43,53 @@ function Servicios() {
     });
   }, []);
 
-
+  const servicios = [
+    {
+      title: '🎨 Diseño web',
+      description: 'Ofrecemos diseños modernos y responsivos adaptados a tus necesidades.'
+    },
+    {
+      title: '💻 Desarrollo web',
+      description: 'Desarrollamos sitios web utilizando las últimas tecnologías del mercado.'
+    },
+    {
+      title: '🔧 Mantenimiento y soporte',
+      description: 'Brindamos soporte técnico y mantenimiento para asegurar que tu sitio funcione sin problemas.'
+    },
+    {
+      title: '📈 Otros servicios',
+      description: 'Ofrecemos una variedad de servicios adicionales para complementar tu presencia en línea.'
+    },
+    {
+      title: '🔍 Consultoría tecnológica',
+      description: 'Te asesoramos en la elección de tecnologías y estrategias digitales para tu negocio.'
+    },
+    {
+      title: '⚙️ Integraciones y automatizaciones',
+      description: 'Integramos herramientas y automatizamos procesos para optimizar tu operación en línea.'
+    }
+  ];
+  
   return (
     <section className={styles.servicios}>
       <h2>Servicios</h2>
 
-      {['🎨 Diseño web', '💻 Desarrollo web', '🔧 Mantenimiento y soporte', '📈 Otros servicios', '🔍 Consultoría tecnológica', '⚙️ Integraciones y automatizaciones'].map((title, index) => (
-        <motion.div 
-        key={index}
-          ref={refs[index]}
-          className={styles.servicio}
-          initial="hidden"
-          animate={inViews[index] ? "visible" : "hidden"}
-          variants={fadeInUp}
-        >
-          <div className={styles.servicio}>
-            <h3>{title}</h3>
-            <p>Descripción del servicio {index + 1}.</p>
-          </div>
-        </motion.div>
-      ))}
+      {servicios.map((servicio, index) => (
+  <motion.div 
+    key={index}
+    ref={refs[index]}
+    className={styles.servicio}
+    initial="hidden"
+    animate={inViews[index] ? "visible" : "hidden"}
+    variants={fadeInUp}
+  >
+    <div className={styles.servicio}>
+      <h3>{servicio.title}</h3>
+      <p>{servicio.description}</p>
+    </div>
+  </motion.div>
+))}
+
     </section>
   );
 }

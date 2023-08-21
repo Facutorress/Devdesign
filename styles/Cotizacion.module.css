@@ -4,14 +4,14 @@
   padding: 150px 0;
   background-color: #f9f9f9;
   background-image: url('/Images/facutorres._Fondo_minimalista_que_evoca_un_ambiente_futurista_c_d07023be-2e26-4a73-95fc-7b2ac047fccc.png');
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   color: #050505; /* Cambio de color de texto a blanco para mejor contraste */
   font-family: 'Montserrat', sans-serif; /* Usar Montserrat para el contenido */
 }
-.cotizacion h2 {
+.cotizacion h2  {
   display: inline-block; /* Agregado para que el h2 sea un bloque en línea */
 }
 .formulario {
