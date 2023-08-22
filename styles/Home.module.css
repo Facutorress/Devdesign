@@ -138,19 +138,39 @@
     max-width: 90%; /* Ajustar el ancho máximo */
   }
 }
+/* Estilos para móviles */
 
+/* Estilos para móviles */
 /* Estilos para móviles */
 @media (max-width: 480px) {
   .mainTitle, .mainText {
-    font-size: 16px; /* Reducir aún más el tamaño de fuente */
+    text-align: center;
+    padding-right: 0;
+    margin: 10px 0;
   }
 
-  .imageContainer, .imageContainerr {
-    width: 150px; /* Reducir aún más el tamaño de las imágenes */
-    height: 105px;
+
+  .imageContainer {
+    width: 100px; /* Ajustar el tamaño de las imágenes */
+    height: 70px;
+    margin-left: 45px;
+  }
+  .imageContainerr {
+    width: 100px; /* Ajustar el tamaño de las imágenes */
+    height: 70px;
+    margin-left: 45px;
+    margin-top: 60px;
   }
 
   .parrafo {
-    font-size: 1em; /* Reducir el tamaño de fuente del párrafo */
+    font-size: 1em;
+    margin-left: 315px; /* Espacio a la izquierda del texto */
+    margin-top: -105px;
+  }
+  .parrafoo {
+    font-size: 1em;
+    margin-left: 260px; /* Espacio a la izquierda del texto */
+    margin-top: -105px;
   }
 }
+

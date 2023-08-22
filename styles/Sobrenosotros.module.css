@@ -61,13 +61,35 @@
 }
 
 /* Estilos para móviles */
+/* ... (tu código anterior) ... */
+
 @media (max-width: 768px) {
+  .sobreNosotros {
+    height: auto; /* Hacer que la altura sea automática */
+    padding-bottom: 40px; /* Añadir padding en la parte inferior para evitar superposiciones */
+  }
+
   .misionVision {
     flex-direction: column; /* Cambiar a dirección de columna */
+    gap: 40px; /* Aumentar el espacio entre .mision y .vision */
   }
 
   .mision, .vision {
     max-width: 90%; /* Ajustar el ancho máximo */
-    margin: 0 auto; /* Centrar los bloques */
+    margin: 20px auto; /* Centrar los bloques y añadir margen vertical */
+    padding: 15px; /* Reducir el padding */
+  }
+
+  .sobreNosotros h2 {
+    font-size: 2.5em; /* Reducir el tamaño de la fuente */
+    margin-bottom: 20px; /* Reducir el margen inferior */
+  }
+
+  .sobreNosotros h3 {
+    font-size: 1.8em; /* Reducir el tamaño de la fuente */
+  }
+
+  .sobreNosotros p {
+    font-size: 1.1em; /* Reducir el tamaño de la fuente */
   }
 }

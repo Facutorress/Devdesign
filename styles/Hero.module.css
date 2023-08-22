@@ -53,22 +53,31 @@
 
 /* Estilos para tablets */
 @media (max-width: 768px) {
+  .hero {
+    background-position: center 30%; /* Ajustar la posición de la imagen de fondo */
+  }
+
   .heroContent h1 {
     font-size: 2em; /* Reducir el tamaño de fuente */
+    margin-bottom: 15px; /* Reducir el margen inferior */
   }
 
   .heroContent p {
     font-size: 1em; /* Reducir el tamaño de fuente del párrafo */
+    margin-bottom: 20px; /* Reducir el margen inferior */
   }
 }
 
 /* Estilos para móviles */
 @media (max-width: 480px) {
+
   .heroContent h1 {
-    font-size: 1.5em; /* Reducir aún más el tamaño de fuente */
+    font-size: 1.8em; /* Aumentar un poco el tamaño de fuente */
+    margin-bottom: 20px; /* Aumentar el margen inferior */
   }
 
   .heroContent p {
-    font-size: 0.9em; /* Reducir aún más el tamaño de fuente del párrafo */
+    font-size: 1em; /* Aumentar un poco el tamaño de fuente del párrafo */
+    margin-bottom: 25px; /* Aumentar el margen inferior */
   }
 }
