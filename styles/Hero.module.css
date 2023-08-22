@@ -50,3 +50,25 @@
   background-color: #ff6347;
   transform: scale(1.05); /* Hacer que el botón crezca ligeramente al pasar el mouse */
 }
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2em; /* Reducir el tamaño de fuente */
+  }
+
+  .heroContent p {
+    font-size: 1em; /* Reducir el tamaño de fuente del párrafo */
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 1.5em; /* Reducir aún más el tamaño de fuente */
+  }
+
+  .heroContent p {
+    font-size: 0.9em; /* Reducir aún más el tamaño de fuente del párrafo */
+  }
+}

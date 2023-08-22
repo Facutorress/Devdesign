@@ -1,62 +1,68 @@
-/* Navbar.module.css */
-
 .navbar {
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(229, 222, 223);
-  box-shadow: none;
-  border: none;
-  outline: none;
-  margin-bottom: 0;
-  font-family: 'Montserrat', sans-serif; 
-  font-weight: bold;
-  padding: -15px;
+  padding: 0 20px; /* Añadir padding a los lados */
 
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center; /* Alinear verticalmente el logo y el título */
 }
 
 .logo {
-border-radius: 80px;
+  border-radius: 50%; /* Hacer que el logo sea un círculo */
   margin-right: 15px;
-  margin-top: 10px;
 }
 
 .navbar h2 {
-  margin-right: 675px;
   font-family: 'Montserrat', sans-serif; 
+  margin: 0; /* Eliminar el margen */
 }
 
 .navbarNav {
   display: flex;
-  font-family: 'Montserrat', sans-serif; 
 }
 
 .navItem {
-  margin: 6px 10px;
-  position: relative;
+  margin: 0 10px;
   cursor: pointer;
   font-weight: bold;
 }
-.navItem:not(:last-child) {
-  margin-right: 15px;
+
+.navLink {
+  padding: 8px 12px; /* Añadir padding a los lados */
+  text-decoration: none;
+  color: rgb(19, 16, 16);
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 
+.navLink:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+  border-radius: 5px;
+}
 
 .navItem.active .navLink {
   color: #5161ce;
   background-color: white;
-  border-radius: 5px;
-  margin-right: 20px;
-
 }
 
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Cambiar la dirección a columna */
+    height: auto; /* Altura automática */
+    padding: 10px; /* Ajustar el padding */
+  }
 
-.navLink {
-  padding: 8px 1px;
-  text-decoration: none;
-  color: rgb(19, 16, 16);
- 
+  .logoContainer {
+    margin-bottom: 10px; /* Añadir margen inferior */
+  }
+
+  .navbarNav {
+    justify-content: center; /* Centrar los enlaces */
+  }
 }
-
-

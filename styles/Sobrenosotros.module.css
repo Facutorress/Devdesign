@@ -2,62 +2,54 @@
   padding: 60px 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  background-image: url('/Images/facutorres._Art_studio_of_the_future_bathed_in_a_light_gray_hue_24951638-af9a-4c7f-b8ee-28fd4e6ee184.png');
+  background-image: url('/Images/facutorres._pared_blanca-gris_con_un_lado_de_arriba_artistico_y_50f64cf2-4096-49a4-a37a-ad86364a91f4.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.3s ease;
-  height: 800px;
+  height: 800px
 }
 
 .sobreNosotros h2 {
   font-size: 3em;
   font-weight: 700;
   color: #050505;
-  text-shadow: none;
-  margin: 15px;
-  padding: 10px 20px;
-  display: inline-block; /* Para que el borde solo rodee el texto */
-  margin-right: 600px;
-  margin-top: 40px;
-  border: none;
+  margin-bottom: 40px;
 }
 
 .misionVision {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1200px; /* Limitar el ancho máximo */
+  margin: 0 auto; /* Centrar el contenido */
+  gap: 20px; /* Espacio entre .mision y .vision */
+  margin-top: 120px; /* Margen superior agregado */
 }
+
 
 .mision, .vision {
   border: 4px solid #050505;
   background-color: rgba(231, 225, 225, 0.8);
   padding: 20px;
   border-radius: 10px;
-  flex: 1;  /* Añadido para que ocupen el espacio disponible */
-  margin: 0 10px;  /* Añadido un pequeño margen para separarlos */
+  flex: 1;
   text-align: left;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.contenedorAnimado {
-  overflow: hidden;
-  flex: 1;  /* Añadido para que ocupe el espacio disponible */
-}
-
-
 .mision:hover, .vision:hover {
-  transform: scale(1.05); /* Efecto de "zoom" al pasar el mouse */
+  transform: scale(1.05);
 }
+
 
 .sobreNosotros h3 {
   font-size: 2.2em;
   font-weight: 600;
   color: #050505;
   margin-top: 0;
-  text-shadow: 2px 2px 4px rgba(48, 47, 47, 0.411);
   text-align: center;
 }
 
@@ -65,6 +57,17 @@
   font-size: 1.3em;
   color: #0a0a0a;
   line-height: 1.6;
-  text-shadow: 1px 1px 3px rgba(48, 47, 47, 0.356);
   color: #555;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .misionVision {
+    flex-direction: column; /* Cambiar a dirección de columna */
+  }
+
+  .mision, .vision {
+    max-width: 90%; /* Ajustar el ancho máximo */
+    margin: 0 auto; /* Centrar los bloques */
+  }
 }

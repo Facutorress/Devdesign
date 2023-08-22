@@ -5,11 +5,11 @@ import { useRouter } from 'next/router'; // Paso 1: Importa useRouter
 import styles from '../styles/Navbar.module.css';
 
 function Navbar() {
-  const router = useRouter(); // Paso 2: Utiliza el hook
+  const router = useRouter();
 
   return (
     <nav className={styles.navbar}>
-      <div>
+      <div className={styles.logoContainer}>
         <Image
           className={styles.logo}
           src="/Images/logo.png"
@@ -17,8 +17,8 @@ function Navbar() {
           width={100}
           height={100}
         />
+        <h2>Developers Designs</h2>
       </div>
-      <h2>Developer Designers</h2>
       <ul className={styles.navbarNav}>
         <li className={router.pathname === "/" ? `${styles.navItem} ${styles.active}` : styles.navItem}>
           <Link href="/"><p className={styles.navLink}>Home</p></Link>

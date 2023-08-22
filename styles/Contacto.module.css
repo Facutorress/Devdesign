@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .contacto {
   padding: 50px;
@@ -60,4 +60,38 @@
   color: red;
   font-size: 0.8em;
   margin-top: 5px;
+}
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 30px 10px; /* Reducimos el padding */
+  }
+
+  .formulario {
+    max-width: 90%; /* Aumentamos el ancho máximo para aprovechar más espacio */
+    margin: 20px auto; /* Aumentamos el margen superior e inferior */
+  }
+
+  .info {
+    top: 20px; /* Reducimos el desplazamiento hacia abajo */
+    text-align: center; /* Centramos el texto */
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+  .contacto h2 {
+    font-size: 1.5em; /* Reducimos el tamaño de fuente */
+    padding: 5px 10px; /* Reducimos el padding */
+  }
+
+  .formulario input,
+  .formulario textarea,
+  .formulario button {
+    font-size: 0.9em; /* Reducimos el tamaño de fuente */
+  }
+
+  .info {
+    top: 10px; /* Reducimos aún más el desplazamiento hacia abajo */
+  }
 }

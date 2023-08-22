@@ -1,4 +1,4 @@
-/* components/Cotizacion.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .cotizacion {
   padding: 150px 0;
@@ -63,4 +63,40 @@
   padding: 10px 20px; /* Espacio alrededor del texto */
   border-radius: 10px; /* Esquinas redondeadas */
   display: inline-block; /* Para que el fondo solo rodee el texto y no toda la línea */
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .cotizacion {
+    padding: 80px 20px; /* Reducir el padding y añadir padding lateral */
+  }
+
+  .formulario {
+    gap: 15px; /* Reducir el espacio entre elementos */
+    padding: 15px; /* Reducir el padding del formulario */
+  }
+
+  .formulario select, .formulario button {
+    font-size: 0.9em; /* Reducir el tamaño de fuente */
+  }
+
+  .estimacion {
+    font-size: 1.2em; /* Reducir el tamaño de fuente */
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+  .formulario {
+    gap: 10px; /* Reducir aún más el espacio entre elementos */
+  }
+
+  .formulario select, .formulario button {
+    width: 100%; /* Hacer que los campos y botones ocupen todo el ancho */
+    font-size: 0.8em; /* Reducir aún más el tamaño de fuente */
+  }
+
+  .estimacion {
+    font-size: 1em; /* Reducir aún más el tamaño de fuente */
+  }
 }

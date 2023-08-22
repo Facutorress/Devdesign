@@ -1,3 +1,6 @@
+/* En tu archivo globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -23,4 +26,8 @@ a {
     color: rgb(29, 27, 27);
     background: rgb(240, 223, 223);
   }
+}
+
+.app-container{
+  font-family: 'Montserrat', sans-serif; 
 }

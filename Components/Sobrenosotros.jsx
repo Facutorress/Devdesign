@@ -57,20 +57,17 @@ function SobreNosotros() {
           </p>
         </motion.div>
   
-        <div className={styles.contenedorAnimado}>
-  <motion.div 
-    className={styles.vision}
-    initial="hidden"
-    animate={inView ? "visible" : "hidden"}
-    variants={slideFromRight}
-  >
-    <h3>Excelencia y Soporte</h3>
-    <p>
-      Nos esforzamos por mantener un estándar de excelencia en todo lo que hacemos. Además, sabemos que las dudas y necesidades no entienden de horarios, por eso ofrecemos atención y soporte técnico 24/7, asegurando que tu negocio nunca se detenga.
-    </p>
-  </motion.div>
-</div>
-
+        <motion.div 
+          className={styles.vision}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={slideFromRight}
+        >
+          <h3>Excelencia y Soporte</h3>
+          <p>
+            Nos esforzamos por mantener un estándar de excelencia en todo lo que hacemos. Además, sabemos que las dudas y necesidades no entienden de horarios, por eso ofrecemos atención y soporte técnico 24/7, asegurando que tu negocio nunca se detenga.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

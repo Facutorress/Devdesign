@@ -64,30 +64,29 @@
   margin-top: -20px;
   margin: 30px;
   position: relative; /* Esto es necesario para que el pseudo-elemento se posicione correctamente */
-  width: 280px; /* o el ancho que desees */
-  height: 200px; /* o la altura que desees */
   margin-left: 700px;
-  background-image: url('/Images/Diseño\ sin\ título\ \(4\).png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
   /* Otros estilos que desees agregar */
 }
 .imageContainerr {
   margin: 30px;
   position: relative; /* Esto es necesario para que el pseudo-elemento se posicione correctamente */
-  width: 280px; /* o el ancho que desees */
-  height: 200px; /* o la altura que desees */
   margin-left: 700px;
   margin-top: 140px;
-  background-image: url('/Images/facutorres._White_wall_serving_as_the_backdrop_for_a_minimalist_b1ca74ee-0346-4227-919a-fc294aa23983.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
   /* Otros estilos que desees agregar */
 }
 
 .imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.137); /* Aquí, el 0.5 es el nivel de opacidad. Puedes ajustarlo según tus necesidades. */
+}
+.imageContainerr::before {
   content: "";
   position: absolute;
   top: 0;
@@ -101,9 +100,57 @@
   font-weight: bold;
   font-size: 1.2em;
   color: #555;
-  margin-top: -230px;
+  margin-top: -220px;
   line-height: 1.5;
   max-width: 350px;
-  margin-left: 1000px
+  margin-left: 970px
   
+}
+.parrafoo {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #555;
+  margin-top: -180px;
+  line-height: 1.5;
+  max-width: 350px;
+  margin-left: 970px
+  
+}
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .mainTitle, .mainText {
+    justify-content: center; /* Centrar el contenido */
+    padding-right: 0; /* Eliminar el padding derecho */
+    margin-left: 0; /* Eliminar el margen izquierdo */
+    margin-top: 10px; /* Ajustar el margen superior */
+  }
+
+  .imageContainer, .imageContainerr {
+    margin-left: 50%; /* Centrar las imágenes */
+    transform: translateX(-50%); /* Centrar las imágenes */
+    margin-top: 20px; /* Ajustar el margen superior */
+  }
+
+  .parrafo {
+    margin-top: 20px; /* Ajustar el margen superior */
+    margin-left: 50%; /* Centrar el párrafo */
+    transform: translateX(-50%); /* Centrar el párrafo */
+    max-width: 90%; /* Ajustar el ancho máximo */
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+  .mainTitle, .mainText {
+    font-size: 16px; /* Reducir aún más el tamaño de fuente */
+  }
+
+  .imageContainer, .imageContainerr {
+    width: 150px; /* Reducir aún más el tamaño de las imágenes */
+    height: 105px;
+  }
+
+  .parrafo {
+    font-size: 1em; /* Reducir el tamaño de fuente del párrafo */
+  }
 }

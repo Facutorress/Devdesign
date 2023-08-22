@@ -20,20 +20,25 @@ export default function Home() {
     <h1 className={styles.mainTitle}>Bienvenido a nuestra página web</h1>
     <p className={styles.mainText}>Nos especializamos en soluciones web y software de alta calidad.</p>
     
-    <div className={styles.imageContainer}>
-    <Image alt="Diseño web"></Image>
-</div>
-<div className={styles.parrafo}>
-    <p>En un mundo digital que no para de avanzar, es fundamental contar con una presencia en línea firme y de confianza.</p>
-</div>
-<div className={styles.imageContainerr}>
-    <Image alt="Estudio de diseño moderno"></Image>
-</div>
-<div className={styles.parrafo}>
-    <p>Nuestro equipo se dedica a armar soluciones web y aplicaciones, usando lo último y lo mejor en tecnologías de programación. </p>
-</div>
+    <div className={styles.contentGroup}>
+        <div className={styles.imageContainer}>
+            <Image src="Images\Diseño sin título (4).png" width={250} height={180} alt="Diseño web" />
+        </div>
+        <div className={styles.parrafo}>
+            <p>En un mundo digital que no para de avanzar, es fundamental contar con una presencia en línea firme y de confianza.</p>
+        </div>
+    </div>
 
+    <div className={styles.contentGroup}>
+        <div className={styles.imageContainerr}>
+            <Image src="/Images/facutorres._White_wall_serving_as_the_backdrop_for_a_minimalist_b1ca74ee-0346-4227-919a-fc294aa23983.png" width={250} height={140} alt="Estudio de diseño moderno" />
+        </div>
+        <div className={styles.parrafoo}>
+            <p>Nuestro equipo se dedica a armar soluciones web y aplicaciones, usando lo último y lo mejor en tecnologías de programación. </p>
+        </div>
+    </div>
 </motion.div>
+
 
         <Hero></Hero>
         <Sobrenosotros></Sobrenosotros>
