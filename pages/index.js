@@ -22,7 +22,7 @@ export default function Home() {
     
     <div className={styles.contentGroup}>
         <div className={styles.imageContainer}>
-            <Image src="Images\Diseño sin título (4).png" width={250} height={180} alt="Diseño web" />
+            <Image src="/Images\Diseño sin título (4).png" width={250} height={180} alt="Diseño web" />
         </div>
         <div className={styles.parrafo}>
             <p>En un mundo digital que no para de avanzar, es fundamental contar con una presencia en línea firme y de confianza.</p>
